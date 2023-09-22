@@ -1,4 +1,7 @@
 .iml
 .idea/
 .DS_store
+ILJ/
+out/
+*.iml
 
