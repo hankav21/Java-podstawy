@@ -11,6 +11,10 @@ public class Sklep {
         auto1.pojazd.model = model;
         auto2.pojazd.kolor = kolor;
         auto1.liczbaDrzwi = liczbaDrzwi;
+        auto1.pojazd.przejechane_km = 0;
+        auto1.pojazd.dodajPrzejechaneKm(10);
+
+        System.out.println(auto1.pojazd.przejechane_km);
 
         System.out.println(auto1.pojazd.kolor);
         System.out.println(auto1); //java nie wie w jakim formacie chcemy to wyswietlic
@@ -18,7 +22,15 @@ public class Sklep {
 
         auto2 = null;
 
-        System.out.println(auto1.pojazd.kolor);
-        System.out.println(auto2.pojazd.kolor); //NullPointerException
+//        System.out.println(auto1.pojazd.kolor);
+//        System.out.println(auto2.pojazd.kolor); //NullPointerException
+
+        auto1.wyswietl_informacje();
+//        auto2.wyswietl_informacje();
+
+        Fabryka_samochodow fabryka = new Fabryka_samochodow();
+        Auto auto3 = fabryka.wyprodukuj("Mustang", "czerwony", 3 );
+        auto3.wyswietl_informacje();
+
     }
 }
