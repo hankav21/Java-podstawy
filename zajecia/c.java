@@ -20,7 +20,7 @@ class Box{
         h = 1;
     }
 
-    Box(int a){
+    Box(double a){
         w = a;
         d = a;
         h = a;
@@ -40,6 +40,35 @@ class Box{
 
 }
 
+class BoxC extends Box {
+    int c;
+    //4 konstruktory odpowiadajacych klasie bazowej
+
+    BoxC(){
+        super();
+        c = 1;
+    }
+
+    BoxC(double a, int c){
+        super(a);
+        this.c = c;
+    }
+
+    BoxC(int w, int d, int h, int c){
+        super(w,d,h);
+        this.c = c;
+    }
+
+    BoxC(BoxC box){
+        super(box);
+        this.c = box.c;
+    }
+
+    void show(){
+        System.out.println(w + " " + d + " " + h  + " " + c);
+    }
+
+}
 
 public class c {
     public static void main(String[] args) {
@@ -67,6 +96,17 @@ public class c {
         Box box2 = new Box(box);
         box.setDim(1,2,3);
         System.out.println(box2.volume());
+
+
+        BoxC bc1 = new BoxC();
+        BoxC bc2 = new BoxC(2., 21);
+        BoxC bc3 = new BoxC(1,2,3,21);
+        BoxC bc4 = new BoxC(bc2);
+
+        bc1.show();
+        bc2.show();
+        bc3.show();
+        bc4.show();
 
     }
 }

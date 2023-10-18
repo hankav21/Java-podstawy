@@ -2,6 +2,7 @@ class a {
     int a =1, b = 2;
     void f(){ System.out.println("f z a");}
 
+    a() {}
     a(int a) {this.a = a;} // przez to ze napisalismy jwoj konstr. to nie jest juz tworzony ten domyslny gdy nic nie tworzymy
 }
 
@@ -16,6 +17,7 @@ class b extends a{
     void f() { System.out.println("f z b");}
     void fa() { super.f();}
 
+    b(){}
     b(int a, int b) {
         //zawsze niejawnie jak nie ma innego to wywoluje bezparametrowy super()
         super(a); //musi byc 1 instrukcja
