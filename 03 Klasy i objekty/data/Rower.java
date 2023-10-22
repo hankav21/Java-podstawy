@@ -1,3 +1,7 @@
+package data;
+
+import data.Pojazd;
+
 public class Rower {
     Pojazd pojazd;
     boolean maPrzerzutki;

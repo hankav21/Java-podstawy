@@ -1,3 +1,6 @@
+package logic;
+import data.*;
+
 public class Sklep {
     public static void main(String[] args) {
 
@@ -5,7 +8,8 @@ public class Sklep {
         String kolor = "czarny";
         int liczbaDrzwi = 5;
 
-        Auto auto1 = new Auto(); //obiekt = new Auto() = tworzy sie nowy ek=gzemplarz w pamieci
+        /*
+        Auto auto1 = new Auto(); //obiekt = new data.Auto() = tworzy sie nowy ek=gzemplarz w pamieci
         //auto1 = referencja
         Auto auto2 = auto1; //referencja na ten sam oboekt = zmiany w auto2 dzialaja w auto1 = wskazuja to samo miejsce w pamieci
         auto1.pojazd.model = model;
@@ -27,10 +31,15 @@ public class Sklep {
 
         auto1.wyswietl_informacje();
 //        auto2.wyswietl_informacje();
-
+        */
         Fabryka_samochodow fabryka = new Fabryka_samochodow();
         Auto auto3 = fabryka.wyprodukuj("Mustang", "czerwony", 3 );
         auto3.wyswietl_informacje();
+
+        System.out.println("rok produkcji: "+ auto3.getRok());
+        auto3.setRok(2021);
+        System.out.println("rok produkcji: "+ auto3.getRok());
+        auto3.komentarz_na_temat_modelu();
 
     }
 }
