@@ -44,10 +44,13 @@ public class Auto {
         switch(pojazd.model){
             case "Mustang":
                 System.out.println("Mustang: do patatajania po drogach");
-                break;
+                break; //bez breaków wykonywały by sie wszystkie instrukcje z dalszej czesci switcha
             case "Suzuki":
                 System.out.println("Suzuki: Do przelatywania nad rondami");
                 break;
+            case "BMV":
+            case "Audi":
+                System.out.println("Jakies tam marki");
             default:
                 System.out.println("Marka tak nudna ze nie mam na jej temat nic do powiedzenia");
 

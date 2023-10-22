@@ -33,7 +33,7 @@ public class Sklep {
 //        auto2.wyswietl_informacje();
         */
         Fabryka_samochodow fabryka = new Fabryka_samochodow();
-        Auto auto3 = fabryka.wyprodukuj("Mustang", "czerwony", 3 );
+        Auto auto3 = fabryka.wyprodukuj("Suzuki", "czerwony", 3 );
         auto3.wyswietl_informacje();
 
         System.out.println("rok produkcji: "+ auto3.getRok());
