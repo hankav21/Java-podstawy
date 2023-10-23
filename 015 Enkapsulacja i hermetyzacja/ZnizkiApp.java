@@ -36,6 +36,16 @@ public class ZnizkiApp {
         }
 
 
+        //foricz = dla kazdego elementu tablicy wykonaj polecenia w ciele ppetli
+        for(Klient kl: klienci){
+            System.out.println(kl);
+            //! kl nie jest odwolaniem sie do elementu tablicy.
+            // Jest to zmienna z kopia watrosci org tab.
+            //=> uzywac raczej jedynie do odczytu
+        }
+        //break = przerwanie iteracji i wyjscie z petli
+        //continue = przerwanie akt iteraci i przejscie do nast
+
         input.close();
         //zamykamy skaner. Jesli mamy kilka ktore korzystaja ze strumienai system.in,
         // to robiac close zamykamy sobie mozliwość odczytu z konsoli => wtedy przy zamknieciu aki to robic
