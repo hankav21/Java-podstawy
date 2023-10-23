@@ -3,6 +3,7 @@ public class Klient {
     boolean klientPremium;
 
 
+
     //konstruktory
     public Klient(String imie, String nazwisko, boolean klientPremium) {
         this.imie = imie;

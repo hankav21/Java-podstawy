@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class ZnizkiApp {
@@ -14,6 +15,8 @@ public class ZnizkiApp {
 
         Klient klienci[] = new Klient[3];
         Scanner input = new Scanner(System.in);
+        //wprowadzamy lokalizacje zeby wyłapywało przecinki nie były kropkowe
+        input.useLocale(Locale.ITALY);
 //        System.out.println(klienci[0]); = null
         for (int i = 0; i < klienci.length; i++) {
 
@@ -25,7 +28,12 @@ public class ZnizkiApp {
             nazwisko = input.nextLine();
 
             klienci[i] = new Klient(imie, nazwisko, true);
+
+            System.out.println("wprowadz kwote i sprawdz ile zaplaci ten klient: ");
+            Double kwota = input.nextDouble();
+            System.out.println("Do zapłaty: " + serwisZnizkowy.obliczCenePoObnizce(klienci[i], kwota));
         }
+
 
         input.close();
         //zamykamy skaner. Jesli mamy kilka ktore korzystaja ze strumienai system.in,
