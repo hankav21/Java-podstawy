@@ -31,6 +31,7 @@ public class ZnizkiApp {
 
             System.out.println("wprowadz kwote i sprawdz ile zaplaci ten klient: ");
             Double kwota = input.nextDouble();
+            input.nextLine(); //tu pożeram znak nowej lini który nie jest wczytywany gdy wywołyje sie  nexLiczbowe
             System.out.println("Do zapłaty: " + serwisZnizkowy.obliczCenePoObnizce(klienci[i], kwota));
         }
 
