@@ -13,6 +13,7 @@ public class Main {
         queue queue = new queue(5);
         stack stack = new stack(6);
 
+
         System.out.println("queue max: "+ queue.max + " now: "+ queue.now);
 
         for (int i = 0; i < 7; i++){
@@ -28,5 +29,12 @@ public class Main {
             System.out.println("stack: " + stack.pop());
         }
 
+
+
+        stackTr stk_tr = new stackTr(3);
+        Trojkat trojkat = new Trojkat( 1,1,1);
+        stk_tr.push(trojkat);
+        stk_tr.push(new Trojkat(2,2,2));
+        stk_tr.push(new Trojkat(3,3,3));
         }
     }

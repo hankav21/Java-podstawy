@@ -2,11 +2,12 @@ class collection {
     int[] array;
     int max, now;
 
-//    Trojkat[] arr_tr;
+    Trojkat[] arr_tr;
 }
 
 interface pushpop {
     int pop();
+    Trojkat pop_tr();
     void push(int item);
 }
 
@@ -31,27 +32,15 @@ class stack extends collection implements pushpop {
         array = new int[max];
     }
 
+    //.......trojkaty..........
+    public void push(Trojkat item) {
+        if (super.max-1 > super.now){
+            super.now++;
+            super.arr_tr[now] = item;
+            System.out.println("stack: " + item);
+        } else System.out.println("full");
+    }
 
-    //obiekt trojkat
-//    public int pop(){
-//        int x = super.array[super.now];
-//        super.array[super.now] = 0;
-//        super.now--;
-//        return x;
-//    }
-//    public void push(int item) {
-//        if (super.max-1 > super.now){
-//            super.now++;
-//            super.array[now] = item;
-//            System.out.println("stack: " + item);
-//        } else System.out.println("full");
-//    }
-//
-//    public stack(int max) {
-//        super.max = max;
-//        super.now = 0;
-//        array = new int[max];
-//    }
 }
 
 class queue extends collection implements pushpop {
@@ -75,6 +64,32 @@ class queue extends collection implements pushpop {
     }
 
 }
+
+class stackTr extends collection implements pushpop {
+    public Trojkat pop(){
+        Trojkat x = super.arr_tr[super.now];
+        super.now--;
+        return x;
+    }
+
+    public stackTr(int max) {
+        super.max = max;
+        super.now = 0;
+        arr_tr = new Trojkat[max];
+    }
+
+    //.......trojkaty..........
+    public void push(Trojkat item) {
+        if (super.max-1 > super.now){
+            super.now++;
+            super.arr_tr[now] = item;
+            System.out.println("stack: " + item);
+        } else System.out.println("full");
+    }
+
+}
+
+
 
 //class stack extends collection implements  pushpop
 //class queue extends collection implements  pushpop
