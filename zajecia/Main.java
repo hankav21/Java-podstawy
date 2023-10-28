@@ -1,17 +1,40 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.time.*;
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Trojkat tr= new Trojkat(3,4,5);
+        System.out.println("obwod: " +tr.getPerim());
+        System.out.println(("prostokatny: " + tr.isReactang()));
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        Person os = new Person("Grzergorz", "male", 2021, 121.31);
+        System.out.println(os.getAge());
+        System.out.println(os.isFemale());
+
+        queue queue = new queue(5);
+        stack stack = new stack(6);
+
+
+        System.out.println("queue max: "+ queue.max + " now: "+ queue.now);
+
+        for (int i = 0; i < 7; i++){
+            queue.push(i);
+            stack.push(i);
+        }
+
+        for (int i = 0; i< 4; i++){
+            System.out.println("queue: " + queue.pop());
+        }
+
+        for (int i = 0; i< 4; i++){
+            System.out.println("stack: " + stack.pop());
+        }
+
+
+
+        stackTr stk_tr = new stackTr(3);
+        Trojkat trojkat = new Trojkat( 1,1,1);
+        stk_tr.push(trojkat);
+        stk_tr.push(new Trojkat(2,2,2));
+        stk_tr.push(new Trojkat(3,3,3));
         }
     }
-}
