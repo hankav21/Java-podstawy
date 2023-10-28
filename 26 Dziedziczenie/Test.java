@@ -16,7 +16,7 @@ public class Test {
         //problem diamentu = nie mozna dziedziczyc wielokrotnie
 
         Dziecko d = new Dziecko();
-        
+        d.info();
 
     }
 
