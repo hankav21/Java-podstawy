@@ -1,5 +1,7 @@
 package polimorfizm;
 
+import java.util.Objects;
+
 public class Kot extends Zwierze{
     private int wiek;
 
@@ -34,6 +36,24 @@ public class Kot extends Zwierze{
         }else if (!getNazwa().equals(other.getNazwa()))
             return false;
         return true;    //jesli zaden z ifow nic nie wylapal to znaczy ze obiekty sa takie same
+    }
+
+    //hashCode:
+    /*
+        1. jesli wywolamy ja na tym samym obiekcie za kazdym razem powinnismy otrzymac ta sama wartosc
+        2. jesli equals() na obj = true to hashCode tych 2 obj powinien byc identyczny
+        3. dla 2 roznych obiektow nie musi pojawic sie rozna wartosc
+
+        uzywana jest do tego zeby wydajnie zapisywac i wyszukiwac obiekty w bardziej zlozonych strukturach
+     */
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(wiek, getNazwa());
+        //wartosz z .hash sprowadza sie do tego ze
+        // wartosc kazdego pola prostego jest mnozona przez liczbe pierwsza i sumowana do jednej liczby
+        //jesli ktrej pole jest obiektem to wywoluje sie na nim jego metoda hashCode
+        //== Objects.hash(wiek, getNazwa().hashCode())
     }
 
     public void zamrucz(){
