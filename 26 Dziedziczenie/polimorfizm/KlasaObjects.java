@@ -21,6 +21,7 @@ public class KlasaObjects {
         System.out.println("k3.hashCode: " + (k3.hashCode()));
         System.out.println("k4.hashCode: " + (k4.hashCode()));
 
+        System.out.println(k1.toString());
 
     }
 }

@@ -56,6 +56,13 @@ public class Kot extends Zwierze{
         //== Objects.hash(wiek, getNazwa().hashCode())
     }
 
+    @Override
+    public String toString() {
+        return "Kot{" +
+                "wiek=" + wiek +
+                '}' +super.toString();
+    }
+
     public void zamrucz(){
         System.out.println("mrrrr");
     }

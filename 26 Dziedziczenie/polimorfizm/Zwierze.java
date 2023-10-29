@@ -18,4 +18,11 @@ public class Zwierze {
     public void dajGlos(){
         System.out.println("Zwierze o nazwie " + nazwa);
     }
+
+    @Override
+    public String toString() {
+        return "Zwierze{" +
+                "nazwa='" + nazwa + '\'' +
+                '}';
+    }
 }
